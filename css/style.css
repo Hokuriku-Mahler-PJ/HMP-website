@@ -1,0 +1,1739 @@
+
+/* =========================
+   HMP BASE STYLE
+========================= */
+
+:root {
+  --black: #101010;
+  --white: #f5f5f3;
+  --gray: #999999;
+  --line: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.8;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1160px;
+  margin: auto;
+}
+
+/* HEADER */
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #444;
+}
+
+.nav {
+  min-height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--gray);
+}
+
+.navigation {
+  display: flex;
+  gap: 28px;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.navigation a:hover {
+  color: var(--gray);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 75% 40%,
+    #555, #222 35%, #101010 75%);
+}
+
+.hero-content {
+  padding-top: 100px;
+}
+
+.eyebrow,
+.section-number {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gray);
+}
+
+.hero h1 {
+  font-size: clamp(55px, 9vw, 110px);
+  line-height: 1;
+  letter-spacing: -5px;
+  margin: 30px 0;
+}
+
+.hero-message {
+  font-size: 20px;
+  letter-spacing: 4px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  padding: 13px 25px;
+  border: 1px solid white;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.button:hover {
+  background: white;
+  color: black;
+}
+
+.button-white {
+  background: white;
+  color: black;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 100px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-title {
+  font-size: clamp(35px, 5vw, 60px);
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin-top: 12px;
+}
+
+.section-subtitle {
+  color: var(--gray);
+  font-size: 12px;
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+/* NEWS */
+
+.news-item {
+  display: flex;
+  gap: 35px;
+  padding: 25px 0;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+}
+
+.news-item time {
+  color: var(--gray);
+}
+
+/* CONCERT */
+
+.concert-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 35px;
+  align-items: center;
+}
+
+.concert-visual {
+  min-height: 350px;
+  background: linear-gradient(135deg, #555, #111);
+  display: grid;
+  place-items: center;
+}
+
+.concert-visual span {
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: -3px;
+}
+
+.concert-info h3 {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.concert-info p {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+}
+
+/* ABOUT */
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-content h3 {
+  font-size: 35px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.about-content p {
+  color: #bbb;
+  font-size: 14px;
+}
+
+/* JOIN */
+
+.join-section {
+  background: var(--white);
+  color: var(--black);
+}
+
+.join-section .section-number {
+  color: #777;
+}
+
+.join-section p {
+  margin: 25px 0;
+}
+
+/* ACTIVITY */
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.activity-card {
+  min-height: 200px;
+  background: linear-gradient(135deg, #444, #191919);
+  display: flex;
+  align-items: end;
+  padding: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 55px 0;
+  color: var(--gray);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.footer h2 {
+  font-size: 30px;
+  color: white;
+}
+
+
+/* =========================
+   ABOUT PAGE HEADER & MENU FIX
+========================= */
+
+/* Header */
+.header {
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 7%;
+    background: #111;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1;
+}
+
+/* Menu button */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 1px;
+    background: #fff;
+}
+
+/* Navigation: hidden by default */
+.navigation {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #111;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 0.4s ease,
+                visibility 0.4s ease;
+}
+
+/* Open menu */
+.navigation.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.navigation-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.navigation-inner a {
+    color: #111;
+    font-size: clamp(28px, 5vw, 54px);
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: -0.04em;
+}
+
+.menu-close {
+    position: absolute;
+    top: 30px;
+    right: 7%;
+    border: none;
+    background: transparent;
+    color: #111;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navigation-footer {
+    position: absolute;
+    bottom: 35px;
+    left: 7%;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+
+/* =========================
+   ABOUT PAGE LAYOUT
+========================= */
+
+/* Page Hero */
+.page-hero {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 65vh;
+    padding: 100px 7% 70px;
+    box-sizing: border-box;
+    background: #111;
+    color: #fff;
+}
+
+.page-hero-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-hero-label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-size: clamp(64px, 12vw, 160px);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+}
+
+/* Common Sections */
+.section-light,
+.section-dark {
+    padding: 120px 7%;
+    box-sizing: border-box;
+}
+
+.section-light {
+    background: #f5f5f3;
+    color: #111;
+}
+
+.section-dark {
+    background: #111;
+    color: #f5f5f3;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+}
+
+.section-heading {
+    margin: 0 0 40px;
+    font-size: clamp(38px, 6vw, 76px);
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+}
+
+/* Introduction */
+.about-introduction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 15px;
+    line-height: 2.2;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+/* Philosophy */
+.philosophy-content {
+    max-width: 850px;
+}
+
+.philosophy-content p {
+    font-size: 17px;
+    line-height: 2.2;
+}
+
+/* Activities */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.activity-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.activity-item h3 {
+    margin: 22px 0 12px;
+    font-size: 22px;
+}
+
+.activity-item p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* Bottom Message */
+.about-bottom {
+    padding: 150px 7%;
+    background: #f5f5f3;
+    color: #111;
+    text-align: center;
+}
+
+.about-bottom h2 {
+    margin: 0 0 25px;
+    font-size: clamp(40px, 7vw, 90px);
+    letter-spacing: -0.06em;
+}
+
+.about-bottom p {
+    font-size: 15px;
+    line-height: 2;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid currentColor;
+    color: inherit;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+
+
+/* =========================
+   CONCERT PAGE
+========================= */
+
+.concert-page-hero {
+    min-height: 65vh;
+    background: #101010;
+    color: #f5f5f3;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 8%;
+}
+
+.concert-page-hero h1 {
+    font-size: clamp(55px, 9vw, 115px);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    margin: 30px 0;
+}
+
+.concert-page-hero-content > p:last-child {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.concert-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.concert-upcoming,
+.concert-past {
+    padding: 120px 8%;
+    background: #f5f5f3;
+    color: #101010;
+}
+
+.concert-program,
+.concert-bottom {
+    padding: 120px 8%;
+    background: #101010;
+    color: #f5f5f3;
+}
+
+.concert-heading {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 55px;
+}
+
+.concert-main-image {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.concert-main-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.concert-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.concert-category {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    margin-bottom: 20px;
+}
+
+.concert-title-area h3 {
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.05;
+}
+
+.concert-information {
+    border-top: 1px solid #ccc;
+}
+
+.concert-data {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.concert-data span {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: #777;
+}
+
+.concert-data p {
+    font-size: 14px;
+}
+
+.concert-description {
+    max-width: 700px;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.concert-ticket-link {
+    margin-top: 40px;
+}
+
+.concert-link {
+    display: inline-flex;
+    gap: 40px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid currentColor;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    color: inherit;
+}
+
+.concert-link span {
+    font-size: 18px;
+}
+
+.program-list {
+    border-top: 1px solid #555;
+}
+
+.program-item {
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+    padding: 35px 0;
+    border-bottom: 1px solid #555;
+}
+
+.program-item > span {
+    font-size: 13px;
+    color: #999;
+}
+
+.program-item h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.program-item p {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 0.1em;
+}
+
+.program-note {
+    margin-top: 25px;
+    font-size: 11px;
+    color: #999;
+}
+
+.past-concert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.past-concert-card img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+}
+
+.past-concert-info {
+    padding: 25px 0;
+}
+
+.past-concert-info > span {
+    font-size: 11px;
+    color: #777;
+}
+
+.past-concert-info h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.past-concert-info p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.concert-bottom > p:not(.section-label) {
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+
+/* =========================
+   JOIN PAGE
+========================= */
+
+.join-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.join-page-hero {
+    min-height: 65vh;
+    background: #101010;
+    color: #f5f5f3;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 8%;
+}
+
+.join-page-hero h1 {
+    font-size: clamp(60px, 10vw, 125px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin: 30px 0;
+}
+
+.join-page-hero-content > p:last-child {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.join-message,
+.join-conditions,
+.join-application {
+    background: #f5f5f3;
+    color: #101010;
+    padding: 120px 8%;
+}
+
+.join-recruitment,
+.join-flow {
+    background: #101010;
+    color: #f5f5f3;
+    padding: 120px 8%;
+}
+
+.join-heading {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 55px;
+}
+
+.join-message-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.join-message-text {
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.join-message-text p {
+    margin-bottom: 25px;
+}
+
+.join-main-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.join-description {
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 2.1;
+    margin-bottom: 50px;
+}
+
+.recruitment-list {
+    border-top: 1px solid #555;
+}
+
+.recruitment-item {
+    display: grid;
+    grid-template-columns: 70px 1fr 100px;
+    align-items: center;
+    gap: 20px;
+    padding: 27px 0;
+    border-bottom: 1px solid #555;
+}
+
+.recruitment-item > span:first-child {
+    color: #999;
+    font-size: 12px;
+}
+
+.recruitment-item p {
+    font-size: 20px;
+    letter-spacing: 0.08em;
+}
+
+.recruitment-status {
+    font-size: 11px;
+    text-align: right;
+    color: #ccc;
+}
+
+.recruitment-note {
+    margin-top: 20px;
+    color: #999;
+    font-size: 11px;
+}
+
+.conditions-list {
+    border-top: 1px solid #ccc;
+}
+
+.condition-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 25px;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.condition-item > span {
+    color: #888;
+    font-size: 12px;
+}
+
+.condition-item h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.condition-item p {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.join-steps {
+    border-top: 1px solid #555;
+}
+
+.join-step {
+    padding: 35px 0;
+    border-bottom: 1px solid #555;
+}
+
+.join-step > span {
+    color: #999;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+}
+
+.join-step h3 {
+    font-size: 25px;
+    margin: 12px 0;
+    letter-spacing: 0.05em;
+}
+
+.join-step p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.join-application-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 18px 0;
+    border-bottom: 1px solid #101010;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+}
+
+.join-application-link span {
+    font-size: 20px;
+}
+
+
+/* =========================
+   ACTIVITY PAGE
+========================= */
+
+.activity-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-page-hero {
+    min-height: 65vh;
+    background: #101010;
+    color: #f5f5f3;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 8%;
+}
+
+.activity-page-hero h1 {
+    font-size: clamp(60px, 10vw, 125px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin: 30px 0;
+}
+
+.activity-page-hero-content > p:last-child {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.activity-intro,
+.activity-gallery,
+.activity-archive {
+    background: #f5f5f3;
+    color: #101010;
+    padding: 120px 8%;
+}
+
+.activity-days,
+.activity-bottom {
+    background: #101010;
+    color: #f5f5f3;
+    padding: 120px 8%;
+}
+
+.activity-heading {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 55px;
+}
+
+.activity-intro-content {
+    max-width: 700px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+/* PHOTO GRID */
+
+.activity-photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px 30px;
+}
+
+.activity-photo-item {
+    min-width: 0;
+}
+
+.activity-photo-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.activity-photo-item:hover img {
+    transform: scale(1.02);
+}
+
+.activity-photo-caption {
+    padding-top: 20px;
+}
+
+.activity-photo-caption span {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #777;
+}
+
+.activity-photo-caption h3 {
+    font-size: 22px;
+    margin: 8px 0;
+    letter-spacing: 0.05em;
+}
+
+.activity-photo-caption p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* DAILY ACTIVITIES */
+
+.activity-days-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.activity-days-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.activity-days-text h3 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.activity-days-text p {
+    font-size: 14px;
+    line-height: 2.2;
+    color: #ccc;
+}
+
+/* ARCHIVE */
+
+.activity-archive-list {
+    border-top: 1px solid #ccc;
+}
+
+.activity-archive-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 30px;
+    gap: 20px;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    color: #101010;
+    transition: opacity 0.3s;
+}
+
+.activity-archive-item:hover {
+    opacity: 0.5;
+}
+
+.activity-archive-item span {
+    font-size: 12px;
+    color: #777;
+}
+
+.activity-archive-item p {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+}
+
+.activity-archive-note {
+    font-size: 11px;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* BOTTOM */
+
+.activity-bottom > p:not(.section-label) {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.activity-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 50px;
+    padding: 18px 0;
+    margin-top: 35px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   TICKET PAGE
+========================= */
+
+.ticket-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ticket-page-hero {
+    min-height: 65vh;
+    background: #101010;
+    color: #f5f5f3;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 8%;
+}
+
+.ticket-page-hero h1 {
+    font-size: clamp(60px, 10vw, 125px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin: 30px 0;
+}
+
+.ticket-page-hero-content > p:last-child {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.ticket-upcoming,
+.ticket-purchase,
+.ticket-notes {
+    background: #f5f5f3;
+    color: #101010;
+    padding: 120px 8%;
+}
+
+.ticket-price,
+.ticket-buy,
+.ticket-bottom {
+    background: #101010;
+    color: #f5f5f3;
+    padding: 120px 8%;
+}
+
+.ticket-heading {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 55px;
+}
+
+/* CONCERT INFORMATION */
+
+.ticket-main-image {
+    margin-bottom: 55px;
+}
+
+.ticket-main-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.ticket-category {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+}
+
+.ticket-event-info h3 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.05;
+    margin-bottom: 45px;
+}
+
+.ticket-event-data {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #ccc;
+}
+
+.ticket-event-data > div {
+    padding: 22px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.ticket-event-data span {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: #777;
+}
+
+.ticket-event-data p {
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+/* PRICE */
+
+.ticket-price-list {
+    border-top: 1px solid #555;
+}
+
+.ticket-price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 0;
+    border-bottom: 1px solid #555;
+}
+
+.ticket-price-item span {
+    font-size: 10px;
+    color: #999;
+    letter-spacing: 0.15em;
+}
+
+.ticket-price-item h3 {
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+.ticket-price-item > p {
+    font-size: clamp(30px, 5vw, 50px);
+    letter-spacing: -0.04em;
+}
+
+.ticket-price-note {
+    margin-top: 25px;
+    color: #999;
+    font-size: 11px;
+}
+
+/* PURCHASE */
+
+.ticket-purchase-content {
+    max-width: 850px;
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+.purchase-steps {
+    margin-top: 55px;
+    border-top: 1px solid #ccc;
+}
+
+.purchase-step {
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.purchase-step span {
+    font-size: 10px;
+    color: #777;
+    letter-spacing: 0.15em;
+}
+
+.purchase-step h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.purchase-step p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* BUY BUTTON */
+
+.ticket-buy-description {
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.ticket-buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    padding: 20px 25px;
+    border: 1px solid #f5f5f3;
+    color: #f5f5f3;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    transition: 0.3s;
+}
+
+.ticket-buy-button:hover {
+    background: #f5f5f3;
+    color: #101010;
+}
+
+.ticket-buy-button span {
+    font-size: 20px;
+}
+
+.ticket-buy-note {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #999;
+}
+
+/* NOTES */
+
+.ticket-notes-list {
+    border-top: 1px solid #ccc;
+}
+
+.ticket-note-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 25px;
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.ticket-note-item > span {
+    font-size: 12px;
+    color: #888;
+}
+
+.ticket-note-item h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.ticket-note-item p {
+    font-size: 13px;
+    color: #555;
+    line-height: 2;
+}
+
+.ticket-note-disclaimer {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #777;
+}
+
+/* BOTTOM */
+
+.ticket-bottom > p:not(.section-label) {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.ticket-text-link {
+    display: inline-flex;
+    gap: 40px;
+    align-items: center;
+    padding: 18px 0;
+    margin-top: 30px;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   NEWS PAGE
+========================= */
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-page-hero {
+    min-height: 65vh;
+    background: #101010;
+    color: #f5f5f3;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px 8%;
+}
+
+.news-page-hero h1 {
+    font-size: clamp(60px, 10vw, 125px);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+    margin: 30px 0;
+}
+
+.news-page-hero-content > p:last-child {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+.news-latest,
+.news-archive {
+    background: #f5f5f3;
+    color: #101010;
+    padding: 120px 8%;
+}
+
+.news-categories,
+.news-bottom {
+    background: #101010;
+    color: #f5f5f3;
+    padding: 120px 8%;
+}
+
+.news-heading {
+    font-size: clamp(45px, 6vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    margin-bottom: 55px;
+}
+
+/* NEWS LIST */
+
+.news-list {
+    border-top: 1px solid #bbb;
+}
+
+.news-list-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 45px;
+    padding: 35px 0;
+    border-bottom: 1px solid #bbb;
+}
+
+.news-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.news-meta time {
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 0.08em;
+}
+
+.news-category {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+}
+
+.news-item-content h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.news-item-content > p {
+    font-size: 13px;
+    line-height: 2;
+    color: #555;
+}
+
+.news-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+    margin-top: 22px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #101010;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+}
+
+.news-read-more span {
+    font-size: 15px;
+}
+
+.news-placeholder-note {
+    margin-top: 20px;
+    font-size: 11px;
+    color: #777;
+}
+
+/* CATEGORY GRID */
+
+.news-category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #555;
+    border-left: 1px solid #555;
+}
+
+.news-category-card {
+    position: relative;
+    min-height: 210px;
+    padding: 30px;
+    border-right: 1px solid #555;
+    border-bottom: 1px solid #555;
+    color: #f5f5f3;
+    transition: background 0.3s, color 0.3s;
+}
+
+.news-category-card:hover {
+    background: #f5f5f3;
+    color: #101010;
+}
+
+.news-category-card > span:first-child {
+    font-size: 11px;
+    color: #999;
+}
+
+.news-category-card h3 {
+    font-size: clamp(22px, 3vw, 34px);
+    margin-top: 35px;
+    letter-spacing: 0.04em;
+}
+
+.news-category-card p {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.news-category-card .category-arrow {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 20px;
+}
+
+/* ARCHIVE */
+
+.news-archive-list {
+    border-top: 1px solid #bbb;
+}
+
+.news-archive-item {
+    display: grid;
+    grid-template-columns: 100px 1fr 30px;
+    gap: 20px;
+    align-items: center;
+    padding: 28px 0;
+    border-bottom: 1px solid #bbb;
+    color: #101010;
+    transition: opacity 0.3s;
+}
+
+.news-archive-item:hover {
+    opacity: 0.5;
+}
+
+.news-archive-item span {
+    font-size: 12px;
+    color: #777;
+}
+
+.news-archive-item p {
+    font-size: 17px;
+    letter-spacing: 0.05em;
+}
+
+.news-archive-note {
+    margin-top: 20px;
+    color: #777;
+    font-size: 11px;
+}
+
+/* BOTTOM */
+
+.news-bottom > p:not(.section-label) {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.news-bottom-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 35px;
+    padding: 18px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   NAVIGATION MENU FIX
+========================= */
+
+/* メニュー全体 */
+.navigation {
+    justify-content: center;
+    align-items: center;
+    padding: 90px 0 80px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* メニュー項目 */
+.navigation-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* メニューの文字 */
+.navigation-inner a {
+    display: block;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    padding: 2px 0;
+}
+
+/* CLOSEボタン */
+.menu-close {
+    position: absolute;
+    top: 30px;
+    right: 7%;
+    z-index: 10;
+}
+
+/* フッター */
+.navigation-footer {
+    position: absolute;
+    bottom: 25px;
+    left: 7%;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* スマートフォン */
+@media (max-width: 768px) {
+    .navigation {
+        padding: 90px 0 75px;
+    }
+
+    .navigation-inner {
+        width: 84%;
+        gap: 14px;
+    }
+
+    .navigation-inner a {
+        font-size: clamp(28px, 8vw, 40px);
+        line-height: 1.1;
+    }
+
+    .navigation-footer {
+        bottom: 18px;
+        font-size: 9px;
+    }
+}
+
+
+/* =========================
+   COMMON MENU DESIGN
+   Match main page typography
+========================= */
+
+.navigation-inner {
+    width: 80%;
+    max-width: 900px;
+    gap: 20px;
+}
+
+.navigation-inner a {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.navigation-footer {
+    font-size: 8px;
+    letter-spacing: 2px;
+    line-height: 1.4;
+}
+
+.menu-close {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .navigation-inner {
+        gap: 18px;
+    }
+
+    .navigation-inner a {
+        font-size: 20px;
+    }
+}
+
