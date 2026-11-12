@@ -124,7 +124,7 @@
     .section {
         padding: 75px 0;
     }
-}
+
 
 
   .menu-toggle {
@@ -173,6 +173,7 @@
   .section {
     padding: 75px 0;
   }
+}
 
 
 /* =========================
@@ -535,4 +536,42 @@
         font-size: 14px;
     }
 }
+
+
+/* =========================
+   MOBILE MENU LAYER FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    /* ヘッダーをメニューより背面にする */
+    .header {
+        z-index: 100;
+    }
+
+    /* 全画面メニューを最前面にする */
+    .navigation {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+    }
+
+    /* CLOSEボタンも操作可能にする */
+    .menu-close {
+        position: absolute;
+        z-index: 2;
+    }
+
+    /* メニューリンクを操作可能にする */
+    .navigation-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ハンバーガーボタンが前面に残らないようにする */
+    .menu-toggle {
+        z-index: 1;
+    }
+}
+
 
