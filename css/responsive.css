@@ -575,3 +575,94 @@
 }
 
 
+/* =========================
+   MOBILE TEXT OVERFLOW FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    /* 横方向のはみ出し防止 */
+    html,
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* すべての要素の横幅を制御 */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* 長い文字列の折り返し */
+    p,
+    a,
+    li,
+    span,
+    h1,
+    h2,
+    h3,
+    h4 {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    /* メインタイトル */
+    .hero h1 {
+        font-size: clamp(36px, 10vw, 58px);
+        letter-spacing: -0.04em;
+        max-width: 100%;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(38px, 13vw, 76px);
+        letter-spacing: -0.04em;
+        max-width: 100%;
+    }
+
+    /* 各ページの見出し */
+    .section-heading,
+    .concert-heading,
+    .join-heading,
+    .activity-heading,
+    .ticket-heading,
+    .news-heading {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    /* 英語などの長いテキスト */
+    .section-label,
+    .hero-message {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        letter-spacing: 0.05em;
+    }
+
+    /* ボタン */
+    .hero-buttons a,
+    .ticket-buy-button {
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    /* グリッドのはみ出し防止 */
+    .concert-content,
+    .activity-grid,
+    .about-introduction-grid,
+    .philosophy-content,
+    .activities-grid,
+    .concert-detail,
+    .join-message-content {
+        min-width: 0;
+    }
+
+    /* 画像のはみ出し防止 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
