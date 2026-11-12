@@ -1,21 +1,131 @@
-
 @media (max-width: 768px) {
 
-  .navigation {
-    display: none;
-    position: absolute;
-    top: 85px;
-    left: 0;
-    width: 100%;
-    background: #101010;
-    flex-direction: column;
-    padding: 25px 5%;
-    gap: 20px;
-  }
+    /* FULL SCREEN MENU */
+    .navigation {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
 
-  .navigation.active {
-    display: flex;
-  }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: #f5f5f3;
+        color: #101010;
+
+        padding: 80px 6%;
+        gap: 0;
+
+        z-index: 1000;
+
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 0.4s ease,
+                    visibility 0.4s ease;
+    }
+
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* MENU ITEMS */
+    .navigation-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .navigation-inner a {
+        color: #101010;
+        font-size: clamp(25px, 7vw, 38px);
+        letter-spacing: 0.08em;
+    }
+
+    /* CLOSE BUTTON */
+    .menu-close {
+        position: absolute;
+        top: 30px;
+        right: 6%;
+
+        color: #101010;
+        background: none;
+        border: none;
+
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+
+    /* MENU FOOTER */
+    .navigation-footer {
+        position: absolute;
+        bottom: 25px;
+        left: 6%;
+
+        color: #777;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1001;
+    }
+
+    /* 以下は既存のスマホ用設定を維持 */
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .hero-message {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .concert-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        min-height: 150px;
+    }
+
+    .news-item {
+        display: block;
+    }
+
+    .news-item p {
+        margin-top: 8px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+}
+
 
   .menu-toggle {
     display: block;
@@ -63,7 +173,6 @@
   .section {
     padding: 75px 0;
   }
-}
 
 
 /* =========================
