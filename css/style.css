@@ -1768,3 +1768,50 @@ a {
     }
 }
 
+/* INSTAGRAM */
+
+.contact-instagram {
+    margin: 45px 0;
+}
+
+.contact-instagram p {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.contact-instagram a {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #101010;
+    padding-bottom: 8px;
+    transition: opacity 0.3s;
+}
+
+.contact-instagram a:hover {
+    opacity: 0.5;
+}
+
+/* INSTAGRAM ICON */
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: currentColor;
+    transition: opacity 0.3s ease;
+}
+
+.instagram-link svg {
+    width: 44px;
+    height: 44px;
+}
+
+.instagram-link:hover {
+    opacity: 0.5;
+}
