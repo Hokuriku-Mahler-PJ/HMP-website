@@ -1,0 +1,577 @@
+@media (max-width: 768px) {
+
+    /* FULL SCREEN MENU */
+    .navigation {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: #f5f5f3;
+        color: #101010;
+
+        padding: 80px 6%;
+        gap: 0;
+
+        z-index: 1000;
+
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity 0.4s ease,
+                    visibility 0.4s ease;
+    }
+
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* MENU ITEMS */
+    .navigation-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .navigation-inner a {
+        color: #101010;
+        font-size: clamp(25px, 7vw, 38px);
+        letter-spacing: 0.08em;
+    }
+
+    /* CLOSE BUTTON */
+    .menu-close {
+        position: absolute;
+        top: 30px;
+        right: 6%;
+
+        color: #101010;
+        background: none;
+        border: none;
+
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+    }
+
+    /* MENU FOOTER */
+    .navigation-footer {
+        position: absolute;
+        bottom: 25px;
+        left: 6%;
+
+        color: #777;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1001;
+    }
+
+    /* 以下は既存のスマホ用設定を維持 */
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .hero-message {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .concert-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        min-height: 150px;
+    }
+
+    .news-item {
+        display: block;
+    }
+
+    .news-item p {
+        margin-top: 8px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+    letter-spacing: -3px;
+  }
+
+  .hero-message {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .concert-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-card {
+    min-height: 150px;
+  }
+
+  .news-item {
+    display: block;
+  }
+
+  .news-item p {
+    margin-top: 8px;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+}
+
+
+/* =========================
+   ABOUT PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 50px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(60px, 18vw, 100px);
+    }
+
+    .section-light,
+    .section-dark {
+        padding: 80px 6%;
+    }
+
+    .section-label {
+        margin-bottom: 40px;
+    }
+
+    .about-introduction-grid,
+    .philosophy-content,
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .footer {
+        padding: 60px 6% 35px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+}
+
+
+/* =========================
+   ABOUT PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 50px;
+    }
+
+    .page-hero h1 {
+        font-size: clamp(60px, 18vw, 100px);
+    }
+
+    .section-light,
+    .section-dark {
+        padding: 80px 6%;
+    }
+
+    .section-heading {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+
+    .about-introduction-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-bottom {
+        padding: 100px 6%;
+    }
+}
+
+
+
+
+
+/* =========================
+   CONCERT PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .concert-page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 60px;
+    }
+
+    .concert-upcoming,
+    .concert-past,
+    .concert-program,
+    .concert-bottom {
+        padding: 80px 6%;
+    }
+
+    .concert-heading {
+        margin-bottom: 35px;
+    }
+
+    .concert-detail {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .concert-data {
+        grid-template-columns: 110px 1fr;
+    }
+
+    .program-item {
+        gap: 25px;
+    }
+
+    .program-item h3 {
+        font-size: 20px;
+    }
+
+    .past-concert-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+
+/* =========================
+   JOIN PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .join-page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 60px;
+    }
+
+    .join-message,
+    .join-conditions,
+    .join-application,
+    .join-recruitment,
+    .join-flow {
+        padding: 80px 6%;
+    }
+
+    .join-heading {
+        margin-bottom: 35px;
+    }
+
+    .join-message-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .recruitment-item {
+        grid-template-columns: 35px 1fr 75px;
+        gap: 10px;
+    }
+
+    .recruitment-item p {
+        font-size: 15px;
+    }
+
+    .condition-item {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .join-step h3 {
+        font-size: 21px;
+    }
+
+    .join-application-link {
+        gap: 35px;
+    }
+}
+
+
+/* =========================
+   ACTIVITY PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .activity-page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 60px;
+    }
+
+    .activity-intro,
+    .activity-gallery,
+    .activity-archive,
+    .activity-days,
+    .activity-bottom {
+        padding: 80px 6%;
+    }
+
+    .activity-heading {
+        margin-bottom: 35px;
+    }
+
+    .activity-photo-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .activity-days-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .activity-archive-item {
+        grid-template-columns: 55px 1fr 20px;
+        gap: 12px;
+    }
+
+    .activity-archive-item p {
+        font-size: 14px;
+    }
+
+    .activity-days-text h3 {
+        font-size: 35px;
+    }
+}
+
+
+/* =========================
+   TICKET PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .ticket-page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 60px;
+    }
+
+    .ticket-upcoming,
+    .ticket-purchase,
+    .ticket-notes,
+    .ticket-price,
+    .ticket-buy,
+    .ticket-bottom {
+        padding: 80px 6%;
+    }
+
+    .ticket-heading {
+        margin-bottom: 35px;
+    }
+
+    .ticket-event-data {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-event-data > div {
+        padding: 18px 0;
+    }
+
+    .ticket-price-item {
+        padding: 28px 0;
+    }
+
+    .ticket-price-item h3 {
+        font-size: 19px;
+    }
+
+    .ticket-price-item > p {
+        font-size: 32px;
+    }
+
+    .ticket-note-item {
+        grid-template-columns: 40px 1fr;
+        gap: 15px;
+    }
+
+    .ticket-buy-button {
+        gap: 35px;
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   NEWS PAGE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .news-page-hero {
+        min-height: 55vh;
+        padding: 100px 6% 60px;
+    }
+
+    .news-latest,
+    .news-archive,
+    .news-categories,
+    .news-bottom {
+        padding: 80px 6%;
+    }
+
+    .news-heading {
+        margin-bottom: 35px;
+    }
+
+    .news-list-item {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 28px 0;
+    }
+
+    .news-meta {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .news-item-content h3 {
+        font-size: 19px;
+    }
+
+    .news-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-category-card {
+        min-height: 170px;
+        padding: 25px;
+    }
+
+    .news-category-card h3 {
+        margin-top: 25px;
+    }
+
+    .news-archive-item {
+        grid-template-columns: 55px 1fr 20px;
+        gap: 12px;
+    }
+
+    .news-archive-item p {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   MOBILE MENU LAYER FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    /* ヘッダーをメニューより背面にする */
+    .header {
+        z-index: 100;
+    }
+
+    /* 全画面メニューを最前面にする */
+    .navigation {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+    }
+
+    /* CLOSEボタンも操作可能にする */
+    .menu-close {
+        position: absolute;
+        z-index: 2;
+    }
+
+    /* メニューリンクを操作可能にする */
+    .navigation-inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* ハンバーガーボタンが前面に残らないようにする */
+    .menu-toggle {
+        z-index: 1;
+    }
+}
+
+
